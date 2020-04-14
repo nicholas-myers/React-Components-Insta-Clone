@@ -7,29 +7,17 @@ import PostHeader from "./PostHeader";
 import "./Posts.css";
 
 // pass props in this file to
-const Post = ({ data }) => {
+const Post = ({ userData }) => {
   // set up state for the likes
 
   return (
     <div className="post-border">
-      <PostHeader
-        username={data.username}
-        thumbnailUrl={
-          data.thumbnailUrl
-        }
-      />
+      <PostHeader username={userData.username} thumbnailUrl={userData.thumbnailUrl} />
       <div className="post-image-wrapper">
-        <img
-          alt="post thumbnail"
-          className="post-image"
-          src={data.imageUrl}
-        />
+        <img alt="post thumbnail" className="post-image" src={userData.imageUrl} />
       </div>
       <LikeSection />
-      <CommentSection
-        postId={data.imageUrl}
-        comments={data.comments}
-      />
+      <CommentSection postId={userData.imageUrl} comments={userData.comments} />
     </div>
   );
 };

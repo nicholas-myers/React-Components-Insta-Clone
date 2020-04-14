@@ -10,11 +10,15 @@ import "./Posts.css";
 
 const PostsPage = ({ data }) => {
   // set up state for your data
-
+console.log(data)
   return (
     <div className="posts-container-wrapper">
       {/* map through data here to return a Post and pass data as props to Post */}
-      <Post data={data} />
+    {
+    data.map(user => {
+      return <Post userData={user} />
+    })
+    }
     </div>
   );
 };

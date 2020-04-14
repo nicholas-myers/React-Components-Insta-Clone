@@ -14,7 +14,9 @@ import data from "./dummy-data";
 
 const App = () => {
 const [users, setUsers] = useState(data);
-console.log(users)
+// console.log(users)
+
+
 
   return (
     <div className="App">
