@@ -9,7 +9,7 @@ import "./Posts.css";
 // pass props in this file to
 const Post = ({ userData }) => {
   // set up state for the likes
-console.log(userData.comments);
+// console.log(userData)
   return (
     <div className="post-border">
       <PostHeader username={userData.username} thumbnailUrl={userData.thumbnailUrl} />
@@ -17,7 +17,7 @@ console.log(userData.comments);
         <img alt="post thumbnail" className="post-image" src={userData.imageUrl} />
       </div>
       <LikeSection likes={userData.likes}/>
-      <CommentSection comments={userData.comments} />
+      <CommentSection postId={userData.imageUrl} comments={userData.comments} />
     </div>
   );
 };
