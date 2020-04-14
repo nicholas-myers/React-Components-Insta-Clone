@@ -1,8 +1,13 @@
+* {
+  
+}
+
 .posts-container-wrapper {
   height: 50%;
   width: 33%;
   min-width: 400px;
   margin: 5px auto;
+  
 }
 .post-header{
   display: flex;
@@ -11,11 +16,15 @@
 .post-header h2 {
   font-size: 14px;
   font-weight: bold;
+  color: white;
 }
 .post-border {
   border: 1px solid #d3d3d3;
   margin: 15px 0;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 15px black;
+  border-radius: 10px;
+  background-color: dodgerblue;
+  border: 1px solid black;
 }
 .post-image-wrapper {
   height: 100%;
@@ -41,16 +50,23 @@
 }
 .like-section {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  border-radius: 10px;
+  width: 20%;
 }
 
 .like-section-wrapper {
-  height: 10px;
-  width: 10px;
-  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 5%;
 }
 .like-number {
-  width: 100px;
-  margin: 15px 0px;
+  width: 50px;
+  margin: 15px 10px;
   font-size: 16px;
+  background-color: lightblue;
+  border-radius: 5px;
 }
