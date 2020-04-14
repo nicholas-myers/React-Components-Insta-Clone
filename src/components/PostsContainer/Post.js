@@ -16,7 +16,7 @@ const Post = ({ userData }) => {
       <div className="post-image-wrapper">
         <img alt="post thumbnail" className="post-image" src={userData.imageUrl} />
       </div>
-      <LikeSection />
+      <LikeSection likes={userData.likes}/>
       <CommentSection postId={userData.imageUrl} comments={userData.comments} />
     </div>
   );
