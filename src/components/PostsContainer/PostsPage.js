@@ -5,11 +5,20 @@ import Post from "./Post";
 import "./Posts.css";
 // import data 
 
-const PostsPage = () => {
+
+
+
+const PostsPage = ({ data }) => {
   // set up state for your data
+console.log(data)
   return (
     <div className="posts-container-wrapper">
       {/* map through data here to return a Post and pass data as props to Post */}
+    {
+    data.map(user => {
+      return <Post userData={user} />
+    })
+    }
     </div>
   );
 };
